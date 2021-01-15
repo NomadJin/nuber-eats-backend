@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    hostname: postgres
+    volumes:
+      - ./postgres-data:/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: root
+      PGDATA: /data/pgdata
+      POSTGRES_INITDB_ARGS: "--data-checksums -E utf8 --no-locale"

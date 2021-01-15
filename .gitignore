@@ -120,4 +120,4 @@ dist
 .idea
 
 #postgres
-postgres
+postgres/postgres-data
